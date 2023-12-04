@@ -14,5 +14,17 @@
 
 
 
-*/  
+*/
 
+/**#4
+ * Constructor function construct our object and sets the properties on it.
+    // the 'new'  
+ * 
+ */
+class User {
+    constructor() {
+        // set up properties
+    }
+}
+
+const userOne = new User();
