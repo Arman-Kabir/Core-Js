@@ -18,12 +18,20 @@
 
 /**#4
  * Constructor function construct our object and sets the properties on it.
-    // the 'new'  
+ * ** 'this ' keyword refers to the current object in a method or constructor.
+ *
+    // the 'new'  keyword - to create new object
+    // 1 - it creates a new empty object {}
+    // 2 - it binds the value of 'this' to the new empty object.
+    // 3 - it calls the constructor function to 'build' the object
+
+    **The instance refers to individual object that we actually create using a class.
  * 
  */
 class User {
     constructor() {
         // set up properties
+        this.username = 'mario';
     }
 }
 
