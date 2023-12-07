@@ -28,11 +28,34 @@
     **The instance refers to individual object that we actually create using a class.
  * 
  */
+
+/**#5
+  
+ 
+ */
 class User {
-    constructor() {
+    constructor(username,email) {
         // set up properties
-        this.username = 'mario';
+        this.username = username;
+        this.email = email;
+        this.score  = 0;
+    }
+
+    login(){
+        console.log(`${this.username} just logged in`);
+    }
+    logout(){
+        console.log(`${this.username} just logged out`);
+    }
+    incScore(){
+        this.score  +=1;
+        console.log(`${this.username} has a score of ${this.score}`);
     }
 }
 
-const userOne = new User();
+const userOne = new User('mario','mario@g.com');
+const userTwo = new User('luigi','luigi@g.com');
+
+console.log(userOne,userTwo);
+userOne.incScore();
+userOne.incScore();
