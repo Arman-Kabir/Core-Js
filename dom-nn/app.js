@@ -21,5 +21,24 @@
 //     console.log(item);
 // })
 
+// #4
+// const wrap = document.querySelector('#wrapper');
+// console.log(wrap);
+
+// #5
+// The forEach() method calls a function for each element in an array.
+
+// var books = document.querySelectorAll('#book-list li .name');
+
+// Array.from(books).forEach(function(book){
+//     book.textContent += ' (book-title) '
+//     console.log(book);
+// });
+
+const bookList = document.querySelector('#book-list');
+// bookList.innerHTML = '<h2>More books</h2>';
+bookList.innerHTML += '<p>This is how u add HTML</p>';
+// console.log(bookList.innerHTML);
+
 
 
