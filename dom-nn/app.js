@@ -35,10 +35,24 @@
 //     console.log(book);
 // });
 
-const bookList = document.querySelector('#book-list');
+// const bookList = document.querySelector('#book-list');
 // bookList.innerHTML = '<h2>More books</h2>';
-bookList.innerHTML += '<p>This is how u add HTML</p>';
+// bookList.innerHTML += '<p>This is how u add HTML</p>';
 // console.log(bookList.innerHTML);
 
+// #6
+// const banner = document.querySelector('#page-banner');
+// console.log(banner.nodeType);
+// console.log(banner.nodeName);
+// console.log(banner.hasChildNodes());
 
+// const clonedBanner = banner.cloneNode(true);
+// console.log(clonedBanner);
 
+// #7
+const bookList = document.querySelector('#book-list');
+console.log(bookList.parentNode);
+console.log(bookList.parentElement.parentElement);
+
+// console.log(bookList.childNodes);
+console.log(bookList.children);
