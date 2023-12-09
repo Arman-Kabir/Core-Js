@@ -9,7 +9,7 @@
 // var titles = document.getElementsByClassName('title')
 // var lis = document.getElementsByTagName('li')
 // lis[3]
-// for (i = 0; i < titles.length; i++) {
+// for (i = 0; i <br titles.length; i++) {
 //     console.log(titles[i])
 // }
 
@@ -50,9 +50,20 @@
 // console.log(clonedBanner);
 
 // #7
-const bookList = document.querySelector('#book-list');
-console.log(bookList.parentNode);
-console.log(bookList.parentElement.parentElement);
+// const bookList = document.querySelector('#book-list');
+// console.log(bookList.parentNode);
+// console.log(bookList.parentElement.parentElement);
 
-// console.log(bookList.childNodes);
-console.log(bookList.children);
+// // console.log(bookList.childNodes);
+// console.log(bookList.children);
+
+
+// #8
+// const bookList = document.querySelector('#book-list');
+// // console.log(bookList.nextSibling);
+// // console.log(bookList.nextElementSibling);
+
+// console.log(bookList.previousSibling);
+// console.log(bookList.previousElementSibling);
+
+// bookList.previousElementSibling.querySelector('p').innerHTML += '</br> too cool for </br>'
