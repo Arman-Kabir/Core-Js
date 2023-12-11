@@ -1,8 +1,10 @@
 /**
-    #6-Class Inheritance also known as subclasses
+    #6-
+    Class Inheritance also known as subclasses
     * Subclasses are classes which inherit functionality from another class also have additional properties and methods..
     * a subclass extends another class.
     
+    **If the extended class doesn't have a constructor,then it will look for class it extends from and call that class's constructor.
       
     
 
@@ -33,19 +35,26 @@ class User {
     }
 }
 
-class Admin extends User{
-    deleteUser(){
-
+class Admin extends User {
+    deleteUser(user) {
+        users = users.filter((u) => {
+            return u.username !== user.username;
+        })
     }
-}
+} 
 
 const userOne = new User('mario', 'mario@gmail.com');
 const userTwo = new User('luigi', 'luigi@gmail.com');
-const userThree = new Admin('shaun','shaun@gmail.com');
+const userThree = new Admin('shaun', 'shaun@gmail.com');
 
 console.log(userThree);
 
-let users = [userOne,userTwo,userThree];
+let users = [userOne, userTwo, userThree];
+
 console.log(users);
 
 userThree.deleteUser(userTwo);
+userOne.deleteUser(userThree);
+
+
+console.log(users);
