@@ -6,9 +6,11 @@
     
     **If the extended class doesn't have a constructor,then it will look for class it extends from and call that class's constructor.
       
-    
+    * properties are defined in the constructor inside a class
 
+    * When constructor in child class doesn't exist - constructor in parent class is called.
 
+    ** When constructor in child class needs properties from parent class - it needs to call super() inside it's constructor
 
  */
 
@@ -36,6 +38,10 @@ class User {
 }
 
 class Admin extends User {
+    constructor(username,email,title){
+        super(username,email);
+        this.title = title;
+    }
     deleteUser(user) {
         users = users.filter((u) => {
             return u.username !== user.username;
@@ -45,7 +51,7 @@ class Admin extends User {
 
 const userOne = new User('mario', 'mario@gmail.com');
 const userTwo = new User('luigi', 'luigi@gmail.com');
-const userThree = new Admin('shaun', 'shaun@gmail.com');
+const userThree = new Admin('shaun', 'shaun@gmail.com','great');
 
 console.log(userThree);
 
@@ -54,7 +60,7 @@ let users = [userOne, userTwo, userThree];
 console.log(users);
 
 userThree.deleteUser(userTwo);
-userOne.deleteUser(userThree);
+// userOne.deleteUser(userThree);
 
 
 console.log(users);
