@@ -6,6 +6,10 @@
 
     ------------------------------------------
     Defining method inside constructor - it's better to add them onto the prototype.
+    --------------------------------------------------------
+    *****Prototypes ********
+    * Every object in js has a prototype
+    * prototype contain all the methods for that object type
 
  */
 
@@ -14,13 +18,21 @@ function User(username, email) {
     this.email = email;
     // this.login = function(){
     //     console.log(`${this.username} has logged in`);
-    // }
+    // }  
+}
 
-    
+User.prototype.login = function () {
+    console.log(`${this.username} has logged in`);
+    return this;
+}
+User.prototype.logout = function () {
+    console.log(`${this.username} has logged out`);
+    return this;
 }
 
 const userOne = new User('mario', 'mario@gmail.com');
 const userTwo = new User('luigi', 'luigi@gmail.com');
 
-console.log(userOne,userTwo);
-userOne.login();
+// console.log(userOne, userTwo);
+// userOne.login().logout().login();
+// userOne.logout();
