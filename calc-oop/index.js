@@ -23,15 +23,23 @@ class Calculator {
     }
 
     chooseOperator(operation) {
+        if(this.currentOperand = '') return;
+        if(this.previousOperand !== ''){
+            this.compute()
+        }
+
         this.operation = operation;
+        this.previousOperand = this.currentOperand;
+        this.currentOperand = '';
     }
 
     compute() {
-
+        
     }
 
     updateDisplay() {
         this.currentOperandTextElement.innerText = this.currentOperand;
+        this.previousOperandTextElement.innerText = this.previousOperand;
     }
 }
 
